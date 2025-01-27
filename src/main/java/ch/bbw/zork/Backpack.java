@@ -61,20 +61,33 @@ public class Backpack {
             items.remove(item2);
             currentWeight -= (item1.getWeight() + item2.getWeight());
 
-            if (item1.getName().equalsIgnoreCase("Flower") && item2.getName().equalsIgnoreCase("Book")) {
-                Item newItem = new Item("HerbBook", "A book with pressed herbs", 600);
+            if (item1.getName().equalsIgnoreCase("Flower") && item2.getName().equalsIgnoreCase("Pillow")) {
+                Item newItem = new Item("DreamFlower", "A flower that helps you sleep peacefully", 500);
                 addItem(newItem);
                 return newItem;
-            } else if (item1.getName().equalsIgnoreCase("Knife") && item2.getName().equalsIgnoreCase("Flower")) {
-                Item newItem = new Item("HerbKnife", "A knife with herbs", 400);
+            } else if (item1.getName().equalsIgnoreCase("Book") && item2.getName().equalsIgnoreCase("Painting")) {
+                Item newItem = new Item("ArtBook", "A book filled with beautiful paintings", 2500);
                 addItem(newItem);
                 return newItem;
-            } else if (item1.getName().equalsIgnoreCase("Book") && item2.getName().equalsIgnoreCase("Knife")) {
-                Item newItem = new Item("KnifeBook", "A book with a hidden knife", 800);
+            } else if (item1.getName().equalsIgnoreCase("Knife") && item2.getName().equalsIgnoreCase("Pillow")) {
+                Item newItem = new Item("KnifePillow", "A pillow with a hidden knife", 1000);
+                addItem(newItem);
+                return newItem;
+            } else if (item1.getName().equalsIgnoreCase("Painting") && item2.getName().equalsIgnoreCase("Flower")) {
+                Item newItem = new Item("FloralPainting", "A painting adorned with pressed flowers", 2200);
+                addItem(newItem);
+                return newItem;
+            } else if (item1.getName().equalsIgnoreCase("Pillow") && item2.getName().equalsIgnoreCase("Book")) {
+                Item newItem = new Item("DreamBook", "A book that helps you dream vividly", 1200);
+                addItem(newItem);
+                return newItem;
+            } else if (item1.getName().equalsIgnoreCase("Knife") && item2.getName().equalsIgnoreCase("Painting")) {
+                Item newItem = new Item("FramedKnife", "A knife displayed in a beautiful frame", 2300);
                 addItem(newItem);
                 return newItem;
             }
         }
         return null;
     }
+
 }
