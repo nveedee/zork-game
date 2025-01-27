@@ -1,4 +1,3 @@
-// Backpack.java
 package ch.bbw.zork;
 
 import java.util.ArrayList;
@@ -62,7 +61,6 @@ public class Backpack {
             items.remove(item2);
             currentWeight -= (item1.getWeight() + item2.getWeight());
 
-            // Example combination logic
             if (item1.getName().equalsIgnoreCase("Flower") && item2.getName().equalsIgnoreCase("Book")) {
                 Item newItem = new Item("HerbBook", "A book with pressed herbs", 600);
                 addItem(newItem);
