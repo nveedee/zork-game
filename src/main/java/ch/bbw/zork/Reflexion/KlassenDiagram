@@ -1,0 +1,29 @@
++-----------------+       +-----------------+       +-----------------+
+|     Game        |       |     Room        |       |     Item        |
++-----------------+       +-----------------+       +-----------------+
+| - parser        |       | - description   |       | - name          |
+| - currentRoom   |       | - exits         |       | - description   |
+| - lastRooms     |       | - items         |       | - weight        |
+| - rooms         |       | - visited       |       +-----------------+
+| - backpack      |       +-----------------+       | + getName()     |
++-----------------+       | + put()         |       | + getDescription()|
+| + play()        |       | + addItem()     |       | + getWeight()   |
+| + processCommand()|     | + getItems()    |       +-----------------+
+| + printMap()    |       | + nextRoom()    |
+| + takeItem()    |       | + isVisited()   |
+| + dropItem()    |       | + setVisited()  |
++-----------------+       +-----------------+
+
++-----------------+       +-----------------+       +-----------------+
+|   Backpack      |       |   Command       |       |   CommandWords  |
++-----------------+       +-----------------+       +-----------------+
+| - items         |       | - commandWord   |       | - validCommands |
+| - maxWeight     |       | - secondWord    |       +-----------------+
+| - currentWeight |       +-----------------+       | + isCommand()   |
++-----------------+       | + getCommandWord()|     | + showAll()     |
+| + addItem()     |       | + getSecondWord()|     +-----------------+
+| + removeItem()  |       | + isUnknown()   |
+| + getItems()    |       | + hasSecondWord()|
+| + getCurrentWeight()|   +-----------------+
+| + getMaxWeight()|
++-----------------+

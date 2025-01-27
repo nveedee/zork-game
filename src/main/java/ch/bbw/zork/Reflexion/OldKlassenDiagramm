@@ -1,0 +1,29 @@
++-------------------+       +-------------------+       +-------------------+
+|       Game        |       |       Room        |       |      Parser       |
++-------------------+       +-------------------+       +-------------------+
+| - parser          |       | - description     |       | - commands        |
+| - currentRoom     |       | - exits           |       | - inputStream     |
+| - outside         |       +-------------------+       +-------------------+
+| - lab             |       | + put()           |       | + get()           |
+| - tavern          |       | + shortDescription()|     | + showCommands()  |
+| - gblock          |       | + longDescription()|     +-------------------+
+| - office          |       | + nextRoom()      |
++-------------------+       +-------------------+
+| + play()          |
+| + printWelcome()  |
+| + processCommand()|
+| + printHelp()     |
+| + goRoom()        |
++-------------------+
+
++-------------------+       +-------------------+       +-------------------+
+|      Command      |       |   CommandWords    |       |  MainApplication  |
++-------------------+       +-------------------+       +-------------------+
+| - commandWord     |       | - validCommands   |       |                   |
+| - secondWord      |       +-------------------+       | + main()          |
++-------------------+       | + isCommand()     |       +-------------------+
+| + getCommandWord()|       | + showAll()       |
+| + getSecondWord() |       +-------------------+
+| + isUnknown()     |
+| + hasSecondWord() |
++-------------------+
